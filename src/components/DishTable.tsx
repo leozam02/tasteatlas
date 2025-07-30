@@ -8,7 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-import { type Dish } from '../interface/Dish';
+import Dish from '../interface/Dish';
 
 export default function DishTable( { data } : { data: Dish[] } ) {
 
@@ -26,8 +26,14 @@ export default function DishTable( { data } : { data: Dish[] } ) {
               {row.position}
             </TableCell>
             <TableCell align="right">{row.title} ({row.subtitle})</TableCell>
+            <TableCell align="center">{row.country}</TableCell>
+            <TableCell align="center">{row.rating}</TableCell>
+            <TableCell align="center">{row.iconic }</TableCell>
+            <TableCell align="center">{row.ingredients}</TableCell>
             
             {/* PENDIENTE: Valores a renderizar en cada celda  */}
+
+
             
           </TableRow>
         ))
@@ -50,6 +56,11 @@ export default function DishTable( { data } : { data: Dish[] } ) {
           <TableRow>
             <TableCell>Puesto</TableCell>
             <TableCell align='center'>Plato</TableCell>
+            <TableCell align='center'>Pais</TableCell>
+            <TableCell align='center'>Rating</TableCell>
+            <TableCell align='center'>Restaurante Iconico</TableCell>
+            <TableCell align='center'>Ingrediente</TableCell>
+
             
             {/* PENDIENTE: Cabeceras de las columnas  */}
 
